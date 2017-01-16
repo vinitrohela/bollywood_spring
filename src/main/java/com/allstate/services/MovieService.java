@@ -17,4 +17,25 @@ public class MovieService {
     public Movies create(Movies m){
         return this.respository.save(m);
     }
+
+    public Movies findById(int id){
+        return this.respository.findOne(id);
+    }
+
+    public Iterable<Movies> findAll() {
+        return this.respository.findAll();
+    }
+
+    public Movies findByTitle(String title){
+        return this.respository.findByTitle(title);
+    }
+
+    public void delete(int id) {
+        this.respository.delete(id);
+    }
+
+    public Movies updateTitle(Movies m){
+        m.setTitle("Nirmal");
+        return m;
+    }
 }
